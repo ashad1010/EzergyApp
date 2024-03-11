@@ -1,0 +1,113 @@
+<!--
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Ezergy App
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+Comment starts here
+
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    
+  </div>
+Ends here
+-->
+<!--
+<ion-card>
+  <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+  <ion-card-header>
+    <ion-card-title>Smart Energy Management</ion-card-title>
+    <ion-card-subtitle>Power up your life with Ezergy</ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    Learn More
+  </ion-card-content>
+</ion-card>
+
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button (click)="GoToDashboard()" tab="dashboard">
+      <ion-icon name="bar-chart-outline"></ion-icon>
+      Dashboard
+    </ion-tab-button>
+    <ion-tab-button (click)="GoToHome()" tab="home">
+      <ion-icon name="home"></ion-icon>
+      Home
+    </ion-tab-button>
+    <ion-tab-button (click)="GoToSettings()" tab="settings">
+      <ion-icon name="settings"></ion-icon>
+      Settings
+    </ion-tab-button>
+
+    COMMENT STARTS HERE
+    <ion-tab-button tab="search">
+      <ion-icon name="search"></ion-icon>
+      Search
+    </ion-tab-button>
+   ENDS HERE
+  </ion-tab-bar>
+</ion-tabs>
+</ion-content>
+-->
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Ezergy App
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <!--
+    <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+
+    -->
+    <img alt="Silhouette of mountains" src="https://static.wixstatic.com/media/efa878_5887b7032cc94719a542ceaa5872d19f~mv2.png/v1/fill/w_301,h_106,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Ezergy%20logo_edited.png" />
+
+    <ion-card-header>
+      <ion-card-title>Smart Energy Management</ion-card-title>
+      <ion-card-subtitle>Power up your life with Ezergy</ion-card-subtitle>
+    </ion-card-header>
+    
+    <ion-card-content>
+      Learn More
+    </ion-card-content>
+  </ion-card>
+
+  <div style = "text-align:center">
+    <h1>Blynk data:</h1>
+    <h2>{{Heading}}</h2>
+  </div>
+  <!-- Your additional content goes here -->
+
+  <ion-button>Clear</ion-button>
+
+
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button (click)="GoToHome()" tab="home">
+        <ion-icon name="home"></ion-icon>
+        Home
+      </ion-tab-button>
+      <ion-tab-button (click)="GoToDashboard()" tab="dashboard">
+        <ion-icon name="bar-chart-outline"></ion-icon>
+        Dashboard
+      </ion-tab-button>
+      <ion-tab-button (click)="GoToSettings()" tab="settings">
+        <ion-icon name="settings"></ion-icon>
+        Settings
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>

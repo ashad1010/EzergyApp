@@ -1,0 +1,100 @@
+<!--
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">settings</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  Tabs
+
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button (click)="GoToHome()" tab="home">
+        <ion-icon name="home"></ion-icon>
+        Home
+      </ion-tab-button>
+      <ion-tab-button (click)="GoToDashboard()" tab="dashboard">
+        <ion-icon name="bar-chart-outline"></ion-icon>
+        Dashboard
+      </ion-tab-button>
+      <ion-tab-button (click)="GoToSettings()" tab="settings">
+        <ion-icon name="settings"></ion-icon>
+        Settings
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>
+-->
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Settings</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-item>
+    <ion-label position="stacked">Electricity Rate (¢ per kWh)</ion-label>
+    <ion-input type="number" [(ngModel)]="electricityRate"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Water Rate ($ per gallon)</ion-label>
+    <ion-input type="number" [(ngModel)]="waterRate"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Past Month's Utility Bill Cost</ion-label>
+    <ion-input type="number" [(ngModel)]="pastBillCost"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Electricity Consumed (kWh)</ion-label>
+    <ion-input type="number" [(ngModel)]="electricityConsumed"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Water Consumed (gallon)</ion-label>
+    <ion-input type="number" [(ngModel)]="waterConsumed"></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" (click)="saveSettings()">Save Settings</ion-button>
+
+  <!-- Display savings -->
+  <ion-item *ngIf="savings !== undefined">
+    <ion-label position="stacked">Savings</ion-label>
+    <ion-input type="text" readonly="true" value="{{ savings | currency: 'USD':true }}"></ion-input>
+  </ion-item>
+
+  <!--Tabs-->
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button (click)="GoToHome()" tab="home">
+        <ion-icon name="home"></ion-icon>
+        Home
+      </ion-tab-button>
+      <ion-tab-button (click)="GoToDashboard()" tab="dashboard">
+        <ion-icon name="bar-chart-outline"></ion-icon>
+        Dashboard
+      </ion-tab-button>
+      <ion-tab-button (click)="GoToSettings()" tab="settings">
+        <ion-icon name="settings"></ion-icon>
+        Settings
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>
+
