@@ -16,6 +16,6 @@ export class GetApiService {
 
   apiCall()
   {
-    return this.http.get('https://blynk.cloud/external/api/get?token=JvQFJtdavohU5BTFohxC8E9eKfz1Vsq1&dataStreamId=3');
+    return this.http.get('https://blynk.cloud/external/api/get?token=JvQFJtdavohU5BTFohxC8E9eKfz1Vsq1&dataStreamId=5');
   }
 }
