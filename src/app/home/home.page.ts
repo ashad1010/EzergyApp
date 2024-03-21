@@ -2,7 +2,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
-//import { GetApiService } from './get-api.service';
+import { GetApiService } from './get-api.service';
 
 //import { InfiniteScrollCustomEvent } from '@ionic/angular';
 
@@ -42,8 +42,7 @@ export class HomePage {
 
   items = [];
 
-  constructor(private router: Router) {}
-
+  constructor(private router: Router, private api:GetApiService) {}
   GoToDashboard() {
     this.router.navigate(['/dashboard']);
   }
@@ -56,7 +55,15 @@ export class HomePage {
     this.router.navigate(['/home']);
   }
 
-  
 
-  }
+  ngOnInit()
+  {
+    this.api.apiCall().subscribe((data: any)=>{
+      console.warn("Blynk data retrieved:", data);
+      this.Heading=data;
+ })
+}
+
+}
+
 
